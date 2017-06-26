@@ -1,0 +1,97 @@
+$container-width-col:33.33%;
+$container-col-color:purple;
+$global-margin:0;
+$global-padding:0;
+$labYellow: rgb(247, 182, 23);
+$labGray: rgb(43, 43, 43);
+$lab-color:white;
+$row-space:4%;
+
+$subtitle-font: 20px Helvetica;
+$simple-text: 1em Helvetica;
+
+$col-1:8.33%;
+$col-2:16.666667%;
+$col-3:25%;
+$col-4:33.333333%;
+$col-5:41.666667%;
+$col-6:50%;
+$col-7:58.33%;
+$col-8:66.66%;
+$col-9:75%;
+$col-10:83.33%;
+$col-11:91.66%;
+$col-12:100%;
+
+@mixin list-item ($padd) {
+	border: 1px solid black;
+	margin:($padd);
+	padding: ($padd);
+	background-color: $labGray;
+	color:white;
+	text-align:left;
+}
+
+@mixin aside-inverse ($padd) {
+	background-color: $labGray;
+	color:white;
+	font:$simple-text;
+	padding: $padd;
+	text-align: center;
+}
+
+body {
+	margin:$global-margin;
+	padding:$global-padding;
+}
+
+#main-container {
+	width: $col-12;
+	display:flex;
+	justify-content: center;
+	align-content: space-between;
+}
+
+.nav {
+	background-color: $labYellow;
+	color:$lab-color;
+	padding: 20px;
+	font:$subtitle-font;
+}
+
+.colum-aside {
+	width:$col-3;
+	list-style: none;
+
+	ul {
+		padding:0;
+		margin-right:5%;
+	}
+	li {
+		@include list-item (3px);
+	}
+
+	li:last-child {
+		background-color: $labYellow;
+	}
+
+	li:hover {
+		background-color: $labYellow;
+	}
+}
+
+.col-main {
+	width:$col-6;
+}
+
+h1, h2, h4 {
+	font:$subtitle-font;
+}
+
+ div p, div ol, div ul {
+	font:$simple-text;
+}
+
+.column-aside-right {
+	@include aside-inverse (2px);
+}
