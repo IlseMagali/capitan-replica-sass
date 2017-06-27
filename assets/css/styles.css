@@ -1,3 +1,4 @@
+/* variables de media queries*/
 body {
   margin: 0;
   padding: 0; }
@@ -7,6 +8,12 @@ body {
   display: flex;
   justify-content: center;
   align-content: space-between; }
+  @media screen and (max-width: 320px) {
+    #main-container {
+      flex-direction: column; } }
+  @media screen and (max-width: 768px) {
+    #main-container {
+      flex-direction: column; } }
 
 .nav {
   background-color: #f7b617;
@@ -31,9 +38,20 @@ body {
     background-color: #f7b617; }
   .colum-aside li:hover {
     background-color: #f7b617; }
+  @media screen and (min-width: 320px) {
+    .colum-aside {
+      width: 100%; } }
+  @media screen and (max-width: 768px) {
+    .colum-aside {
+      width: 25%;
+      margin: 0; } }
 
 .col-main {
   width: 50%; }
+  @media screen and (min-width: 768px) {
+    .col-main {
+      width: 75%;
+      float: right; } }
 
 h1, h2, h4 {
   font: 20px Helvetica; }
@@ -47,5 +65,8 @@ div p, div ol, div ul {
   font: 1em Helvetica;
   padding: 2px;
   text-align: center; }
+  @media screen and (min-width: 768px) {
+    .column-aside-right {
+      width: 100%; } }
 
 /*# sourceMappingURL=styles.css.map */
