@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Ejercicio</title>
 		<link rel="stylesheet" href="assets/css/styles.css" type="text/css">
     </head>
@@ -26,9 +27,9 @@
 	          <p>Deberas obtener la lista de asistencia usando la API ubicada en <a href="http://laboratoria.cuadra.co:9339/api/v1/students/">http://laboratoria.cuadra.co:9339/api/v1/students/</a> y agregarle estilos con SASS</p>
 
 	          <h4>Asistencia: </h4>
-	          <ol>
-	            <li> Andrea   <input type="checkbox"> </li>
+	          <ol id="lista-alumnas">
 	            <li> Maria    <input type="checkbox"> </li>
+				<li> Andrea   <input type="checkbox"> </li>
 	            <li> Fernanda <input type="checkbox"> </li>
 	          </ol>
 
@@ -52,5 +53,7 @@
 	        <div>
 	          <p>Cambiar el tamano de la ventana y cambiar tamaño de esto.</p>
 	        </div>
+			<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+			<script type="text/javascript" src="assets/js/app.js"></script>
     </body>
 </html>
